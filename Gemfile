@@ -29,7 +29,6 @@ gem 'jbuilder', '~> 2.5'
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'devise'
 gem 'roo'
-gem "paperclip", "~> 4.1.1"
 #gem "iconv", "~> 1.0.3"
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
