@@ -25,7 +25,9 @@ test:
 
 production:
   <<: *default
+  encoding: unicode
   host: ec2-23-21-129-125.compute-1.amazonaws.com
   database: dfch5ckirl6n5
   username: iidaqwhumfijrf
   password: aaa26c7719ad1f44e15983e01dd6540e3d5ce9cb043a80bae364389c8fbaa3fe
+  port: 5432
