@@ -1,0 +1,61 @@
+<style>
+div.gallery {
+  margin: 5px;
+  border: 1px solid #ccc;
+  float: left;
+  width: 180px;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+  padding-top: 11px;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+</style>
+<div style="display: -webkit-box;">
+  <img src="<%=asset_path('supplier_image.png')%>" alt="Cinque Terre" width="166" height="170">
+  <div title="<%=@supplier_name%>" class="desc"><%=@supplier_name%></div>
+</div>
+<div>
+<h2>Products</h2>
+<div class="checkbox">
+  <label><input type="checkbox" id="inactive_products" onclick="refresh_list('<%=@supplier_id%>')" value="">Show inactive products</label>
+</div>
+<div id="product_list">
+<%=render :partial => 'home/supplier_products.html.erb'%>
+</div>
+</div>
+<script type="text/javascript">
+function refresh_list(supplier_id){
+  var flag = document.getElementById('inactive_products').checked
+  //var url = 'home/supplier_products/' + supplier_id
+  if (flag == true){
+    $.ajax({
+            url: '',
+            type: "GET",
+            data: "inactive=true"
+        });
+
+  }
+  else{
+    $.ajax({
+            url: '',
+            type: "GET"
+        });
+  }
+
+}
+document.getElementById('inactive_products')
+</script>

@@ -1,0 +1,6 @@
+<%@datas.each do |dt|%>
+<div class="gallery">
+  <img src="<%=asset_path('default_product_icon.png')%>" alt="Cinque Terre" width="166" height="170">
+  <div title="<%=dt.product_title%>" class="desc"><%=dt.product_title%></div>
+</div>
+<%end%>
