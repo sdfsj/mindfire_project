@@ -10,7 +10,7 @@ end
 gem 'rails', '~> 5.1.3'
 # Use sqlite3 as the database for Active Record
 #gem 'sqlite3'
-gem 'mysql2', '0.3.21'
+#gem 'mysql2', '0.3.21'
 # Use Puma as the app server
 gem 'puma', '~> 3.12.1'
 # Use SCSS for stylesheets
@@ -29,6 +29,7 @@ gem 'jbuilder', '~> 2.5'
 #gem 'bootstrap-sass', '~> 3.3.6'
 gem 'devise'
 gem 'roo'
+gem 'postgresql', '~>1.0.0'
 #gem "iconv", "~> 1.0.3"
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'

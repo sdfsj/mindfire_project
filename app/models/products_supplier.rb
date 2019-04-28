@@ -23,7 +23,7 @@ def self.delete_all
 	ProductsSupplier.delete_all
 end
 def self.products_group_by_supplier
-	ProductsSupplier.all.select("supplier_id,supplier_name,sum(is_active) as active,sum(1) as total").group(:supplier_id)
+	ProductsSupplier.all.select("supplier_id,supplier_name,sum(is_active) as active,sum(1) as total").group(:supplier_id,:supplier_name)
 end
 def self.supplier_details_products(supplier_id,inactive_flag=false)
 	if inactive_flag == true

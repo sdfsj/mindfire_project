@@ -12,12 +12,15 @@
 
 ActiveRecord::Schema.define(version: 20190427155726) do
 
-  create_table "products_suppliers", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
+  create_table "products_suppliers", force: :cascade do |t|
     t.integer "product_id", null: false
     t.string "product_title", null: false
     t.integer "supplier_id", null: false
     t.string "supplier_name", null: false
-    t.float "price", limit: 24, null: false
+    t.float "price", null: false
     t.string "category", default: "", null: false
     t.integer "is_active", null: false
     t.datetime "created_at", null: false
@@ -25,7 +28,7 @@ ActiveRecord::Schema.define(version: 20190427155726) do
     t.index ["supplier_id"], name: "index_products_suppliers_on_supplier_id"
   end
 
-  create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+  create_table "users", force: :cascade do |t|
     t.string "name", null: false
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -38,7 +41,7 @@ ActiveRecord::Schema.define(version: 20190427155726) do
     t.datetime "remember_created_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "admin", limit: 1, default: 0, null: false
+    t.integer "admin", default: 0, null: false
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
     t.index ["username"], name: "index_users_on_username", unique: true
