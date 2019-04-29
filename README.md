@@ -18,3 +18,5 @@ Things you may want to cover:
 3. raisl db:migrate
 4. rails db:seed
 5. rails s
+
+* admin credentials jeeturathore89@gmail.com/Jeetu@shop
