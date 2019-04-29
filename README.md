@@ -5,20 +5,16 @@ application up and running.
 
 Things you may want to cover:
 
-* Ruby version
+* Ruby version ruby 2.3.3
 
-* System dependencies
+* System dependencies  : postgresql must be installed
 
-* Configuration
+* postgresl should have user : postgres  | password : password   for development mode
 
-* Database creation
+* Deployment Instructions for development mode
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+1. bundle install
+2. rails db:create
+3. raisl db:migrate
+4. rails db:seed
+5. rails s
