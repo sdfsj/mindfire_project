@@ -17,6 +17,6 @@ Things you may want to cover:
 2. rails db:create
 3. raisl db:migrate
 4. rails db:seed
-5. rails s
+5. rails s -e production
 
 * admin credentials jeeturathore89@gmail.com/Jeetu@shop
